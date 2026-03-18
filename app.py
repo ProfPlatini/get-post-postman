@@ -15,7 +15,8 @@ class Servidor(BaseHTTPRequestHandler):
         self.send_response(200)
         self.end_headers()
         self.wfile.write(b"POST recebido!")
+        self.wfile.write(b"User registrado")
 
-HTTPServer (("0.0.0.0", 8000), Servidor).serve_forever()
+HTTPServer (("0.0.0.0", 8000), Servidor).serve_forever() 
 
 #Esse código cria um servidor local para rodar HTTP, GET E POST
